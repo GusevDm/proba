@@ -1,0 +1,232 @@
+body {
+    height: 100vh;
+    background: #535353;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 500px;
+    margin: auto;
+}
+
+.player-conyainer {
+    min-width: 300px;
+    min-height: 500px;
+    border-radius: 20px;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .player-conyainer {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+.player {
+    min-width: 300px;
+    background: #fff;
+    color: #3c8d57;
+    border-radius: 20px;
+    padding: 20px 0;
+    font-family: calibri;
+    font-size: 20px;
+    user-select: none;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.time-control {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    display: block;
+    fill: #3c8d57;
+    cursor: pointer;
+}
+
+.play-pause {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #3c8d57;
+    cursor: pointer;
+}
+
+.play {
+    width: 50px;
+    height: 50px;
+    display: block;
+    fill: #3c8d57;
+    transform: translate(57%, 50%);
+    cursor: pointer;
+}
+
+.pause {
+    width: 50px;
+    height: 50px;
+    display: none;
+    fill: #3c8d57;
+    transform: translate(50%, 50%);
+}
+
+.time {
+    position: absolute;
+    display: inline-block;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.time-start {
+    left: 0;
+}
+
+.time-end {
+    right: 0;
+}
+
+.parts {
+    margin-top: 20px;
+}
+
+.part {
+    display: flex;
+    padding: 10px 0;
+    margin: 0 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.part:last-child {
+    border-bottom: none;
+}
+
+.part__title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.range-wrapper {
+    position: relative;
+    width: 100%;
+    background: #3c8d57;
+    height: 25px;
+    margin: 15px 0;
+}
+
+.range {
+    position: absolute;
+    z-index: 3;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #3c8d57; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin: 0;
+}
+
+/* Mouse-over effects */
+.range:hover {
+    opacity: 0.8; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.range::-webkit-slider-thumb {
+    z-index: 3;
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 8px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #2b6940; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.range::-moz-range-thumb {
+    z-index: 3;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #3c8d57; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.part__volume {
+    z-index: 3;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    height: 5px; /* Specified height */
+    background: #3c8d57; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin: 0;
+}
+
+/* Mouse-over effects */
+.part__volume:hover {
+    opacity: 0.8; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.part__volume::-webkit-slider-thumb {
+    z-index: 3;
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    border-radius: 50px;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: #2b6940; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.part__volume::-moz-range-thumb {
+    z-index: 3;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #3c8d57; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+/* 
+.repeat-container {
+    width: 100%;
+    display: flex;
+    padding: 0 10px;
+    color: #fff;
+}
+
+.repeat {
+    width: 35px;
+    height: 35px;
+    display: block;
+    fill: #fff;
+    cursor: pointer;
+}
+
+.repeat-title {
+    width: 110px;
+    height: 35px;
+    font-family: calibri;
+    font-size: 16px;
+    line-height: 15px;
+    text-align: center;
+} */

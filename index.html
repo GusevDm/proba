@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="player-conyainer">
+            <div class="player">
+                <div class="control">
+                    <svg class="back time-control"><use xlink:href="./sprite.svg#back"></use></svg>
+                    <div class="play-pause">
+                        <svg class="play">
+                            <use xlink:href="./sprite.svg#play"></use>
+                        </svg>
+                        <svg class="pause">
+                            <use xlink:href="./sprite.svg#pause"></use>
+                        </svg>
+                    </div>
+                    <svg class="forward time-control"><use xlink:href="./sprite.svg#forward"></use></svg>
+                </div>
+                <div class="range-wrapper">
+                    <div class="time-start time">00:00</div>
+                    <input class="range" type="range" min="0" max="100" value="0">
+                    <div class="time-end time">00:00</div>
+                </div>
+                <div class="parts">
+                    <div class="part part-soprano">
+                        <div class="part__title">Сопрано</div>
+                        <input type="range" class="part__volume soprano__volume">
+                    </div>
+                    <div class="part part-alt">
+                        <div class="part__title">Альт</div>
+                        <input type="range" class="part__volume alt__volume">
+                    </div>
+                    <div class="part part-tenor">
+                        <div class="part__title">Тенор</div>
+                        <input type="range" class="part__volume tenor__volume">
+                    </div>
+                    <div class="part part-bas">
+                        <div class="part__title">Бас</div>
+                        <input type="range" class="part__volume bas__volume">
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="repeat-container">
+                <svg class="repeat">
+                    <use xlink:href="./sprite.svg#repeat"></use>
+                </svg>
+                <input type="text" class="repeat-time repeat-start">
+                <input type="text" class="repeat-time repeat-end">
+                <div class="repeat-title">Зациклить фрагмент</div>
+            </div>
+        </div> -->
+
+
+        <audio  class="sound1">
+            <source src="audio.mp3" type="audio/mpeg">
+        </audio>
+        <audio  class="sound2">
+            <source src="audio2.mp3" type="audio/mpeg">
+        </audio>
+        <audio  class="sound3">
+            <source src="audio3.mp3" type="audio/mpeg">
+        </audio>
+        <audio  class="sound4">
+            <source src="audio4.mp3" type="audio/mpeg">
+        </audio>
+
+    <script defer src="./script.js" type="text/javascript">
+    </script>
+</body>
+</html>

@@ -34,8 +34,20 @@ partVolume(altVolume, sound2);
 partVolume(tenorVolume, sound3);
 partVolume(basVolume, sound4);
 
-sound1.addEventListener('input', function() {
-    sopranoVolume.volume = this.value / 100;
+sopranoVolume.addEventListener('input', function() {
+    sound1.volume = this.value / 100;
+});
+
+altVolume.addEventListener('input', function() {
+    sound2.volume = this.value / 100;
+});
+
+tenorVolume.addEventListener('input', function() {
+    sound3.volume = this.value / 100;
+});
+
+basVolume.addEventListener('input', function() {
+    sound4.volume = this.value / 100;
 });
 
 

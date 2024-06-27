@@ -23,11 +23,16 @@ let tenorVolume = document.querySelector(".tenor__volume");
 let basVolume = document.querySelector(".bas__volume");
 
 
+sound1.preload = "auto";
+alert(sound1.readyState);
+
+
 // партии
 function partVolume(part, sound) {
     part.addEventListener('input', function() {
         sound.volume = this.value / 100;
     });
+    
 }
 partVolume(sopranoVolume, sound1);
 partVolume(altVolume, sound2);
@@ -65,9 +70,9 @@ forward.addEventListener("click", function() {
 // громкость
 let volume = 0.3;
 sound1.volume = volume;
-sound2.volume = volume;
-sound3.volume = volume;
-sound4.volume = volume;
+// sound2.volume = volume;
+// sound3.volume = volume;
+// sound4.volume = volume;
 
 
 // синхронизация
@@ -75,34 +80,34 @@ function synchr() {
     let sin = Math.round(sound1.currentTime);
 
     sound1.currentTime = sin;
-    sound2.currentTime = sin;
-    sound3.currentTime = sin;
-    sound4.currentTime = sin;
+    // sound2.currentTime = sin;
+    // sound3.currentTime = sin;
+    // sound4.currentTime = sin;
 }
 
 // включение воспроизведения
 function playAudio() {
     sound1.play();
-    sound2.play();
-    sound3.play();
-    sound4.play();
+    // sound2.play();
+    // sound3.play();
+    // sound4.play();
 }
 
 // пауза
 function pauseAudio() {
     sound1.pause();
-    sound2.pause();
-    sound3.pause();
-    sound4.pause();
+    // sound2.pause();
+    // sound3.pause();
+    // sound4.pause();
 }
 
 // полоса перемотки
 range.addEventListener('change', function() {
     rangePosition = Math.round(sound1.duration) / 100 * this.value;
     sound1.currentTime = rangePosition;
-    sound2.currentTime = rangePosition;
-    sound3.currentTime = rangePosition;
-    sound4.currentTime = rangePosition;
+    // sound2.currentTime = rangePosition;
+    // sound3.currentTime = rangePosition;
+    // sound4.currentTime = rangePosition;
 });
 
 range.addEventListener('input', function() {
@@ -191,9 +196,9 @@ function eventPlayPause(sound) {
 
 // запуск общ. функции
 eventPlayPause(sound1);
-eventPlayPause(sound2);
-eventPlayPause(sound3);
-eventPlayPause(sound4);
+// eventPlayPause(sound2);
+// eventPlayPause(sound3);
+// eventPlayPause(sound4);
 
 
 // контроллер

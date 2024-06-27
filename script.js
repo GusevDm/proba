@@ -34,6 +34,10 @@ partVolume(altVolume, sound2);
 partVolume(tenorVolume, sound3);
 partVolume(basVolume, sound4);
 
+sound1.addEventListener('input', function() {
+    sopranoVolume.volume = this.value / 100;
+});
+
 
 // 5 секунд
 back.addEventListener("click", function() {
